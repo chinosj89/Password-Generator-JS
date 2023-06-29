@@ -15,28 +15,34 @@ function writePassword() {
       passwordLength = Number(prompt("Length must be 8-128 characters."));
     };
   // uppercase
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
-  var includeUpperCase = confirm("Do you want UpperCase Letters?");
-    
+  var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  var includeUpperCase = confirm('Do you want uppercase letters?');
+
   // lowercase
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var includeLowerCase = confirm("Do you want lowercase letters?");
+  var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  var includeLowerCase = confirm('Do you want lowercase letters?');
 
   // numbers
-  var nums = "0123456789";
-  var includeNums = confirm("Do you want numbers?");
+  var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; // nums will be strings as well not as a number because i learned you will have to convert them to strings
+  var includeNums = confirm('Do you want numbers?');
 
   // special keys
-  var special = "!@#$%^&*()";
-  var includeSpecial = confirm("Do you want special keys?");
+  var special = ['!', '@', '#', '$', '%', '^', '&', '*'];
+  var includeSpecial = confirm('Do you want special keys?');
   
 
-  // once the arrays have been completed; i learned to add the confirm which is a boolean. then i then created the if statements such as if the user wants uppercase letter and confirmed then it will be added to the var = passwordGenerated from the arrays of upperCase using +=
-  var passwordGenerated = "";
-  if (includeUpperCase) {passwordGenerated += upperCase} 
-  if (includeLowerCase) {passwordGenerated += lowerCase}
-  if (includeNums) {passwordGenerated += nums}
-  if (includeSpecial) {passwordGenerated +=special}
+  // once the arrays have been completed; i learned to add the confirm which is a boolean. then i then created the if statements such as if the user wants uppercase letter and confirmed then it will be added to the var = passwordGenerated from the arrays of upperCase using += <-- this was for previously learned code; keeping comments and code for future reference
+  var passwordGenerated = [];
+  //if (includeUpperCase) {passwordGenerated += upperCase} 
+  //if (includeLowerCase) {passwordGenerated += lowerCase}
+  //if (includeNums) {passwordGenerated += nums}
+  //if (includeSpecial) {passwordGenerated +=special}
+    // removed this because instructor said to put vars into objects not a whole string. with that being said i have changed the array and now the code for them changes as well as seen below: 
+
+  if (includeUpperCase) {passwordGenerated = passwordGenerated.concat(upperCase);}
+  if (includeLowerCase) {passwordGenerated = passwordGenerated.concat(lowerCase);}
+  if (includeNums) {passwordGenerated = passwordGenerated.concat(nums);} 
+  if (includeSpecial) {passwordGenerated = passwordGenerated.concat(special);}
 
   // to create the password now, i created the var password empty since the passwordText.value = password is asking to be defined. then using the for equation to randomize.
   var password = "";
