@@ -35,5 +35,5 @@ to ensure that if in the confirm statement of the include var is `true` then wit
 In order to randomize the generator, i learned in class how to randomize the variables and the objects stored in them through `Math.floor(Math.random())` then multiplied by the length of each string in the `var passwordGenerate`. I learned that I should first place it in an var preferably call it a `randomIndex` but thought there might be a shorter way of doing so. That is how I found out about the `+=` operator which concatenates and combines values. So my thought process was to randomize the ojects then they must go inside the var created `var password "";`
 
 # WEBSITE
-Deployed site: 
+Deployed site: https://chinosj89.github.io/Password-Generator-JS/
 
