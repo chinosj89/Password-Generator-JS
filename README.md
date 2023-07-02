@@ -18,7 +18,7 @@ Next is to create the `var upperCase, lowerCase, nums, special` along with the c
 <br />
 <br />
 ## Condition Statements
-Now to create the password from the variables, I learned this below: <br />
+Now to create the password from the variables, I learned this below from Stack Overflow https://stackoverflow.com/questions/59340866/random-password-generator-javascript-not-working and from another person's password generator by looking at their Sources to see how they coded theirs https://cynthiamory.github.io/security-keygen/ <br />
 ![Alt text](image-2.png) <br />
 I have stated why I removed these if statements because they simply did not work with the changed array. <br />
 Initially, I had my objects in 1 full string i.e. `ABCDEFGHIJKLMNOPQRSTUVWXYZ`, but my instructor advised me to put them separate from one another. <br />
@@ -34,5 +34,6 @@ to ensure that if in the confirm statement of the include var is `true` then wit
 ![Alt text](image-3.png) <br />
 In order to randomize the generator, i learned in class how to randomize the variables and the objects stored in them through `Math.floor(Math.random())` then multiplied by the length of each string in the `var passwordGenerate`. I learned that I should first place it in an var preferably call it a `randomIndex` but thought there might be a shorter way of doing so. That is how I found out about the `+=` operator which concatenates and combines values. So my thought process was to randomize the ojects then they must go inside the var created `var password "";`
 
+# WEBSITE
 Deployed site: 
 
