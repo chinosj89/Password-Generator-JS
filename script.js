@@ -14,7 +14,7 @@ function writePassword() {
     while (passwordLength < 8 || passwordLength > 128){
       passwordLength = Number(prompt("Length must be 8-128 characters."));
     };
-    if (isNaN(passwordLength)) {
+    if (isNaN(passwordLength) || !Number.isInteger(passwordLength)) {
     return alert("Please type a number, next time") // added function if user types the number i.e "eight, ten, hundred, 1 hundred"
     }
   // uppercase
