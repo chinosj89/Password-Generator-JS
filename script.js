@@ -43,7 +43,10 @@ function writePassword() {
   if (includeLowerCase) {passwordGenerated = passwordGenerated.concat(lowerCase);}
   if (includeNums) {passwordGenerated = passwordGenerated.concat(nums);} 
   if (includeSpecial) {passwordGenerated = passwordGenerated.concat(special);}
-
+  // added else statement if all come up as false
+    else { 
+      return alert("Please refresh and Click Generate Password. I can not generate your password if you don't want any keys. That's not a password, you know")
+    } 
   // to create the password now, i created the var password empty since the passwordText.value = password is asking to be defined. then using the for equation to randomize.
   var password = "";
     for (let i = 0; i < passwordLength; i++) {
