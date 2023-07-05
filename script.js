@@ -14,6 +14,9 @@ function writePassword() {
     while (passwordLength < 8 || passwordLength > 128){
       passwordLength = Number(prompt("Length must be 8-128 characters."));
     };
+    if (isNaN(passwordLength)) {
+    return alert("Please type a number, next time") // added function if user types the number i.e "eight, ten, hundred, 1 hundred"
+    }
   // uppercase
   var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   var includeUpperCase = confirm('Do you want uppercase letters?');
